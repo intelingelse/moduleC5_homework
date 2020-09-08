@@ -1,6 +1,7 @@
 const page_input = document.querySelector("#page");
 const limit_input = document.querySelector("#limit");
 const form = document.querySelector("form");
+const reset_btn = document.querySelector("#j-reset");
 const resultDiv = document.querySelector(".result");
 const loader = document.querySelector(".loader");
 
@@ -27,7 +28,11 @@ function makeRequest(page, limit) {
         });
 }
 
-
+reset_btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    localStorage.clear();
+    location.reload();
+})
 
 form.addEventListener('submit', async (event) => {
     resultDiv.style.display = "none";
