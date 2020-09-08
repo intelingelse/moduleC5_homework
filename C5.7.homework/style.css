@@ -1,0 +1,43 @@
+.container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form {
+    text-align: center;
+}
+
+.loader{
+    margin-top: 10%;
+    display: none;
+}
+
+.btn{
+    width: 100%;
+}
+
+.j-result {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+}
+
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card {
+    width: 30%;
+    margin: 2em 0;
+}
+
+.card-body{
+    padding-top: .2em;
+}
+
+.card-title {
+    margin-bottom: .2em;
+}

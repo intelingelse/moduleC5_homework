@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C5.6</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <form>
+        <div class="form-row align-items-center">
+            <div class="col-4">
+                <label class="sr-only" for="height">height</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">height</div>
+                    </div>
+                    <input type="number" class="form-control" id="height" min="100" max="300" value=""
+                           placeholder="number between 100 and 300"
+                           required="required">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <label class="sr-only" for="width">width</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">width</div>
+                    </div>
+                    <input type="number" class="form-control" id="width" min="100" max="300" value=""
+                           placeholder="number between 100 and 300"
+                           required="required">
+                </div>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary mb-2" id="j-submit">send request</button>
+            </div>
+        </div>
+    </form>
+    <div class="result">
+        <div class="loader">
+            <div class="spinner-grow text-dark" id="loader" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <p id="j-result">result will be here</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

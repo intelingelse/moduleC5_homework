@@ -1,0 +1,30 @@
+.container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form {
+    text-align: center;
+}
+
+.loader{
+    display: none;
+}
+
+.btn{
+    width: 100%;
+}
+
+.j-result {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+}
+
+.result {
+    margin: auto;
+    margin-top: 15%;
+    text-align: center;
+}
+
