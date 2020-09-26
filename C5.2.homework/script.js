@@ -21,38 +21,42 @@ const XML_STRING = `
 
 const xmlDOM = parser.parseFromString(XML_STRING, "text/xml");
 
+// Константы действительно в JavaScript часто именуют с помощью UPPER_CASE
+// Лучше всего именовать переменные единообразно. В JavaScript, обычно, принято использовать camelCase
+// В JavaScript не принято широко использовать так называемый snake case с использованием подчёркивания
+// Подробнее об этом можно почитать здесь: https://www.w3schools.com/js/js_conventions.asp
 const listNode = xmlDOM.querySelector("list");
 const students = listNode.querySelectorAll("student");
-const first_student = students[0];
-const second_student = students[1];
-const first_student_name = first_student.querySelector("name").querySelector("first").textContent + " " +
-    first_student.querySelector("name").querySelector("second").textContent;
-const second_student_name = second_student.querySelector("name").querySelector("first").textContent + " " +
-    second_student.querySelector("name").querySelector("second").textContent;
-const first_student_lang = first_student.querySelector("name").getAttribute("lang");
-const second_student_lang = second_student.querySelector("name").getAttribute("lang");
-const first_student_age = first_student.querySelector("age").textContent;
-const second_student_age = second_student.querySelector("age").textContent;
-const first_student_prof = first_student.querySelector("prof").textContent;
-const second_student_prof = second_student.querySelector("prof").textContent;
+const firstStudent = students[0];
+const secondStudent = students[1];
+const firstStudentName = firstStudent.querySelector("name").querySelector("first").textContent + " " +
+    firstStudent.querySelector("name").querySelector("second").textContent;
+const secondStudent_name = secondStudent.querySelector("name").querySelector("first").textContent + " " +
+    secondStudent.querySelector("name").querySelector("second").textContent;
+const firstStudentLang = firstStudent.querySelector("name").getAttribute("lang");
+const secondStudentLang = secondStudent.querySelector("name").getAttribute("lang");
+const firstStudentAge = firstStudent.querySelector("age").textContent;
+const secondStudentAge = secondStudent.querySelector("age").textContent;
+const firstStudentProf = firstStudent.querySelector("prof").textContent;
+const secondStudentProf = secondStudent.querySelector("prof").textContent;
 
 
-const js_obj = {
+const jsObj = {
     list: [
-        {name: first_student_name, age: first_student_age, prof: first_student_prof, lang: first_student_lang},
-        {name: second_student_name, age: second_student_age, prof: second_student_prof, lang: second_student_lang}
+        {name: firstStudentName, age: firstStudentAge, prof: firstStudentProf, lang: firstStudentLang},
+        {name: secondStudent_name, age: secondStudentAge, prof: secondStudentProf, lang: secondStudentLang}
     ],
 }
 
 console.group("Задание 1")
 console.log("строка XML: ", XML_STRING);
-console.log("JavaScript объект на выходе: ", js_obj);
+console.log("JavaScript объект на выходе: ", jsObj);
 console.groupEnd();
 
 
 // Задание 2
-
-let JSON_STRING = `{
+// так как эта переменная содержит только исходные данные и никак дальше не используется, то можно сделать её const
+const JSON_STRING = `{
  "list": [
   {
    "name": "Petr",
